@@ -69,15 +69,15 @@ function draw() {
         score += 5;
       }*/
 
-      /*if (board1Collision.collided || board2Collision.collided) {
+      if (board1Collision.collided || board2Collision.collided) {
         score += 5;
-      }*/
+      }
 
       /*if (board1Collision.collided || board2Collision.collided) {
         score = 5;
       }*/
 
-      
+
       var posX = playerArrows[i].body.position.x;
       var posY = playerArrows[i].body.position.y;
 
@@ -102,7 +102,7 @@ function draw() {
   textAlign("center");
   textSize(30);
   text("Flechas Restantes: " + numberOfArrows, 200, 100);
-  
+
   // Pontuação
   fill("#FFFF");
   textAlign("center");
@@ -113,9 +113,9 @@ function draw() {
     gameOver();
   }*/
 
-  /*if (numberOfArrows == 0) {
+  if (numberOfArrows == 0) {
     gameOver();
-  }*/
+  }
 
   /*if (numberOfArrows = 0) {
     gameOver();
@@ -156,14 +156,14 @@ function keyReleased() {
 function gameOver() {
   swal(
     {
-     title: `Fim de Jogo!!!`,
+      title: `Fim de Jogo!!!`,
       text: "Obrigado por jogar!!",
       imageUrl:
         "https://raw.githubusercontent.com/vishalgaddam873/PiratesInvision/main/assets/board.png",
       imageSize: "150x150",
       confirmButtonText: "Jogar Novamente"
     },
-    function(isConfirm) {
+    function (isConfirm) {
       if (isConfirm) {
         location.reload();
       }
